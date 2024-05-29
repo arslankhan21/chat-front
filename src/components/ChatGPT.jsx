@@ -15,7 +15,7 @@ export default function ChatGPT() {
       // Call OpenAI API to get response
       const open_ai_client = new OpenAI({ apiKey: import.meta.env.VITE_APP_OPENAI_KEY , dangerouslyAllowBrowser: true  });
       const completion = await open_ai_client.chat.completions.create({
-        model: 'gpt-4-1106-preview',
+        model: "gpt-4o",
         messages: [{ // Explicitly stringify the messages array
           role: "system",
           content: promptText.trim()
